@@ -45,8 +45,11 @@ app.use(cors(corsOptions));
 app.use('/api/veterinarios', VeterinarioRouter);
 app.use('/api/pacientes', PacienteRouter);
 
+// Definir puerto
+const PORT = process.env.PORT || 4000;
+
 // Arrancar el servidor (port: 4000)
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log('Servidor funcionando en el puerto 4000');
 });
 
